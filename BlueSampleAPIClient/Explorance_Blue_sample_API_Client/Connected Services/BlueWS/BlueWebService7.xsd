@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Blue.Integration" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Blue.Integration" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://disazure.bluera.com/disazureWS/BlueWebService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Blue.Common.Enumerations" />
+  <xs:complexType name="ValidationFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidationFault" nillable="true" type="tns:ValidationFault" />
+  <xs:complexType name="ExceptionFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionFault" nillable="true" type="tns:ExceptionFault" />
+  <xs:complexType name="ArrayOfIDataRow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IDataRow" nillable="true" type="tns:IDataRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIDataRow" nillable="true" type="tns:ArrayOfIDataRow" />
+  <xs:complexType name="IDataRow">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IDataRowValue" nillable="true" type="tns:ArrayOfIDataObj" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IDataRow" nillable="true" type="tns:IDataRow" />
+  <xs:complexType name="ArrayOfIDataObj">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IDataObj" nillable="true" type="tns:IDataObj" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIDataObj" nillable="true" type="tns:ArrayOfIDataObj" />
+  <xs:complexType name="IDataObj">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IDataObjValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IDataObj" nillable="true" type="tns:IDataObj" />
+  <xs:complexType name="ArrayOfIDataSource">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IDataSource" nillable="true" type="tns:IDataSource" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIDataSource" nillable="true" type="tns:ArrayOfIDataSource" />
+  <xs:complexType name="IDataSource">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Caption" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IDataSource" nillable="true" type="tns:IDataSource" />
+  <xs:complexType name="ArrayOfIDataSourceSchema">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IDataSourceSchema" nillable="true" type="tns:IDataSourceSchema" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIDataSourceSchema" nillable="true" type="tns:ArrayOfIDataSourceSchema" />
+  <xs:complexType name="IDataSourceSchema">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ColumnType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsMultivaluedField" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Required" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IDataSourceSchema" nillable="true" type="tns:IDataSourceSchema" />
+  <xs:complexType name="ArrayOfDataBlockInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataBlockInfo" nillable="true" type="tns:DataBlockInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataBlockInfo" nillable="true" type="tns:ArrayOfDataBlockInfo" />
+  <xs:complexType name="DataBlockInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Columns" nillable="true" type="tns:ArrayOfIDataSourceSchema" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Blue.Common.Enumerations" minOccurs="0" name="ConnectorType" type="q1:ConnectorType" />
+      <xs:element minOccurs="0" name="DataBlockName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataBlockType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsUpdateDataSource" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Required" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataBlockInfo" nillable="true" type="tns:DataBlockInfo" />
+  <xs:complexType name="IFileDownloadStream2Info">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Length" type="xs:long" />
+      <xs:element minOccurs="0" name="_changesLog" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IFileDownloadStream2Info" nillable="true" type="tns:IFileDownloadStream2Info" />
+  <xs:complexType name="IFileStreamInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Length" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IFileStreamInfo" nillable="true" type="tns:IFileStreamInfo" />
+</xs:schema>

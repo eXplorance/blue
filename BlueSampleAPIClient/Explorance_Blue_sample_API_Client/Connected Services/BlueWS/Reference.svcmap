@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="66dff069-44bc-477a-a791-24c3916b1e56" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://disazure.bluera.com/disazurews/bluewebservice.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BlueWebService7.xsd" MetadataType="Schema" ID="d2d49dec-510d-4c13-a8ae-516af35e0a0c" SourceId="1" SourceUrl="https://disazure.bluera.com/disazureWS/BlueWebService.svc?xsd=xsd3" />
+    <MetadataFile FileName="BlueWebService71.xsd" MetadataType="Schema" ID="f2c0f218-2ede-4adc-93b5-ca11df3233d3" SourceId="1" SourceUrl="https://disazure.bluera.com/disazureWS/BlueWebService.svc?xsd=xsd2" />
+    <MetadataFile FileName="BlueWebService72.xsd" MetadataType="Schema" ID="da182543-636d-46fc-94e4-127bfc7ea9ac" SourceId="1" SourceUrl="https://disazure.bluera.com/disazureWS/BlueWebService.svc?xsd=xsd5" />
+    <MetadataFile FileName="BlueWebService73.xsd" MetadataType="Schema" ID="f17aea9e-1fc3-4c3e-a34a-85075a39adb9" SourceId="1" SourceUrl="https://disazure.bluera.com/disazureWS/BlueWebService.svc?xsd=xsd4" />
+    <MetadataFile FileName="BlueWebService74.xsd" MetadataType="Schema" ID="6c2d1a7a-7e2c-42a1-8e0e-ee2f9108db1e" SourceId="1" SourceUrl="https://disazure.bluera.com/disazureWS/BlueWebService.svc?xsd=xsd7" />
+    <MetadataFile FileName="BlueWebService75.xsd" MetadataType="Schema" ID="f6c70753-47ee-493e-9cf3-60950377665d" SourceId="1" SourceUrl="https://disazure.bluera.com/disazureWS/BlueWebService.svc?xsd=xsd6" />
+    <MetadataFile FileName="BlueWebService76.xsd" MetadataType="Schema" ID="012e226c-f842-49d4-b79e-bd2af2cf8651" SourceId="1" SourceUrl="https://disazure.bluera.com/disazureWS/BlueWebService.svc?xsd=xsd8" />
+    <MetadataFile FileName="BlueWebService1.wsdl" MetadataType="Wsdl" ID="9f4a3c51-ef01-4efe-8288-2daeed158cae" SourceId="1" SourceUrl="https://disazure.bluera.com/disazureWS/BlueWebService.svc?wsdl" />
+    <MetadataFile FileName="BlueWebService1.disco" MetadataType="Disco" ID="6c9b2fce-ab8d-4368-907d-b3210dd4cfca" SourceId="1" SourceUrl="https://disazure.bluera.com/disazureWS/BlueWebService.svc?disco" />
+    <MetadataFile FileName="BlueWebService77.xsd" MetadataType="Schema" ID="8deceb02-bd27-4c12-a30b-e04886d553bd" SourceId="1" SourceUrl="https://disazure.bluera.com/disazureWS/BlueWebService.svc?xsd=xsd1" />
+    <MetadataFile FileName="BlueWebService78.xsd" MetadataType="Schema" ID="b0466a55-0bde-4f49-a5dd-56d53f6e298d" SourceId="1" SourceUrl="https://disazure.bluera.com/disazureWS/BlueWebService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

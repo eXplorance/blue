@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://disazure.bluera.com/disazureWS/BlueWebService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/Message" />
+  <xs:import schemaLocation="https://disazure.bluera.com/disazureWS/BlueWebService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Blue.Integration" />
+  <xs:import schemaLocation="https://disazure.bluera.com/disazureWS/BlueWebService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://disazure.bluera.com/disazureWS/BlueWebService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+  <xs:import schemaLocation="https://disazure.bluera.com/disazureWS/BlueWebService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Blue.Integration.Model" />
+  <xs:element name="ReportExportRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReportId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Language" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="APIKeyHeader" nillable="true" type="xs:string" />
+  <xs:element name="StreamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/Message" name="DataStream" type="q1:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RowCount" type="xs:int" />
+  <xs:element name="GetCSVReportDataCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reportID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCSVReportDataCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCSVReportDataCountResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterImportRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AbortOnEmpty" type="xs:boolean" />
+        <xs:element minOccurs="0" name="DataSourceID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ReplaceBlueRole" type="xs:boolean" />
+        <xs:element minOccurs="0" name="ReplaceDataSourceAccessKey" type="xs:boolean" />
+        <xs:element minOccurs="0" name="ReplaceLanguagePreferences" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterImportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TransactionID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Message" nillable="true" type="xs:string" />
+  <xs:element name="DataObjectTransferRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Blue.Integration" minOccurs="0" name="Data" nillable="true" type="q2:ArrayOfIDataRow" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="ColumnName" nillable="true" type="q3:ArrayOfstring" />
+  <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="ColumnType" nillable="true" type="q4:ArrayOfstring" />
+  <xs:element name="IncrementalImport" type="xs:boolean" />
+  <xs:element name="TransactionID" type="xs:long" />
+  <xs:element name="BaseResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileStreamTransferRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/Message" name="Data" type="q5:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataStreamTransferRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/System.IO" minOccurs="0" name="Data" nillable="true" type="q6:MemoryStream" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StreamTransferRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/Message" name="Data" type="q7:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FinalizeImportRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelImportRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReportImportFailureRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ErrorMessage" nillable="true" type="xs:string" />
+  <xs:element name="BaseRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataSourceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Blue.Integration" minOccurs="0" name="DataSources" nillable="true" type="q8:ArrayOfIDataSource" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataSourceSchemaRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataSourceSchemaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Blue.Integration" minOccurs="0" name="Columns" nillable="true" type="q9:ArrayOfIDataSourceSchema" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendEmailRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataSourceID" nillable="true" type="xs:string" />
+  <xs:element name="EmailType" type="xs:int" />
+  <xs:element name="BasicRequestDataSourceId">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DatasourceId" nillable="true" type="xs:string" />
+  <xs:element name="DataBlockInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Blue.Integration" minOccurs="0" name="DataBlockInfoList" nillable="true" type="q10:ArrayOfDataBlockInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataBlockRelationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Blue.Integration.Model" minOccurs="0" name="DataBlockRelations" nillable="true" type="q11:ArrayOfDataBlockRelation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWebMethodList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWebMethodListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetWebMethodListResult" nillable="true" type="q12:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileStreamDownloadRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataSourceConnectionType" type="xs:int" />
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DataSourceFields" nillable="true" type="q13:ArrayOfstring" />
+        <xs:element minOccurs="0" name="DataSourceId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataSourceType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExportFromDigTable" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileStreamDownloadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.microsoft.com/Message" name="FileByteStream" type="q14:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Length" type="xs:long" />
+  <xs:element name="ProgressStatusRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataSourceId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProgressStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataSourceId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProgressStatus" type="xs:int" />
+        <xs:element minOccurs="0" name="TransactionId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileStreamDownloadRequest2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DataSourceId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataSourceType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileStreamDownloadResponse2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.microsoft.com/Message" name="FileByteStream" type="q15:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Blue.Integration" name="FileDownloadStream2Info" nillable="true" type="q16:IFileDownloadStream2Info" />
+  <xs:element name="FileStreamDownloadResponse3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.microsoft.com/Message" name="FileByteStream2" type="q17:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Blue.Integration" name="FileStreamInfo" nillable="true" type="q18:IFileStreamInfo" />
+  <xs:element name="ArdsDataObjectTransferRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Blue.Integration" minOccurs="0" name="Data" nillable="true" type="q19:ArrayOfIDataRow" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AbortIfEmpty" type="xs:boolean" />
+  <xs:element name="DataBlockName" nillable="true" type="xs:string" />
+  <xs:element name="IsLastSyncedData" type="xs:boolean" />
+  <xs:element name="BaseResponse2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HasWarningMessage" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Result" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApiKeyHeader" nillable="true" type="xs:string" />
+  <xs:element name="DataObjectTransferRequestV2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Blue.Integration" minOccurs="0" name="Data" nillable="true" type="q20:ArrayOfIDataRow" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="ColumnNamesList" nillable="true" type="q21:ArrayOfstring" />
+  <xs:element name="TransactionId" type="xs:long" />
+  <xs:element name="ArdsDataStreamTransferRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.microsoft.com/Message" name="Data" type="q22:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataStreamTransferRequestV2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.microsoft.com/Message" name="Data" type="q23:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BasicRequest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

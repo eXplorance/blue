@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Blue.Integration.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Blue.Integration.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://disazure.bluera.com/disazureWS/BlueWebService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:complexType name="ArrayOfDataBlockRelation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataBlockRelation" nillable="true" type="tns:DataBlockRelation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataBlockRelation" nillable="true" type="tns:ArrayOfDataBlockRelation" />
+  <xs:complexType name="DataBlockRelation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RelationType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceDataBlockId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceDataBlockName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TargetDataBlockId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TargetDataBlockName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataBlockRelation" nillable="true" type="tns:DataBlockRelation" />
+  <xs:complexType name="LinkFieldsRelation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataBlockRelation">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="SourceToTargetMappingFields" nillable="true" type="q1:ArrayOfTupleOfstringstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LinkFieldsRelation" nillable="true" type="tns:LinkFieldsRelation" />
+  <xs:complexType name="MappingTableRelation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataBlockRelation">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MiddleDataBlockId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MiddleDataBlockName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="MiddleToTargetMappingFields" nillable="true" type="q2:ArrayOfTupleOfstringstring" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="SourceToMiddleMappingFields" nillable="true" type="q3:ArrayOfTupleOfstringstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MappingTableRelation" nillable="true" type="tns:MappingTableRelation" />
+</xs:schema>
